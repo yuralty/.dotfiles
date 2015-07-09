@@ -1,0 +1,76 @@
+snippet module
+module ${1:MODULENAME} {
+	namespace "${2:NAMESPACE}";
+	prefix ${3:PREFIX};
+		
+	//TODO imports and includes
+
+	description "";
+    revision ${4:date} {
+        description "";
+    }
+}
+endsnippet
+
+snippet import
+import "${1:NAME}" {
+    prefix ${2:NAMESPACE};
+}
+endsnippet
+
+snippet include
+include "${1:NAME}";
+endsnippet
+
+snippet typedef
+typedef ${1:TYPENAME} {
+	type ${2:DERIVEDTYPE};
+}
+endsnippet
+
+snippet desc 
+description "${1:TEXT}";
+endsnippet
+
+snippet leaf
+leaf ${1:LEAFNAME} {
+	type ${2:TYPENAME};
+}
+endsnippet
+
+
+snippet leaflist
+leaf ${1:LEAFLISTNAME} {
+	type ${2:TYPENAME};
+}
+endsnippet
+
+snippet container
+container ${1:CONTAINERNAME} {
+	$2
+}
+endsnippet
+
+snippet list
+list ${1:LISTNAME} {
+	key "${2:KEYNAME};
+}
+endsnippet
+
+snippet augment
+augment ${1:MODULENAME} {
+	$2
+}
+endsnippet
+
+snippet grouping 
+grouping ${1:GROUPINGMANE} {
+	$2
+}
+endsnippet
+
+snippet leafref
+leafref {
+	path "${1:PATH}";
+}
+endsnippet
