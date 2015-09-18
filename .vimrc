@@ -173,7 +173,7 @@ Plugin 'tpope/vim-surround'
 
 " syntax checker
 "Plugin 'Syntastic'
-Plugin 'Engspchk'
+"Plugin 'Engspchk'
 
 " lang enhance
 "Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
@@ -181,6 +181,7 @@ Plugin 'Engspchk'
 Plugin 'pep8'
 Plugin 'sukima/xmledit'
 Plugin 'mattn/emmet-vim'
+Plugin 'mephux/bro.vim'
 
 
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -331,7 +332,7 @@ autocmd FileType html,css EmmetInstall
 " Python
 "au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
-au FileType python setlocal expandtab shiftwidth=3 tabstop=6 softtabstop=3 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 " Don't let pyflakes use the quickfix window

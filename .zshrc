@@ -49,7 +49,7 @@ ZSH_THEME="pygmalion"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git osx)
 
 # User configuration
 
@@ -59,7 +59,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texb
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -83,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
 function powerline_precmd() {
     export PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
 }
@@ -95,4 +97,6 @@ function install_powerline_precmd() {
     done
     precmd_functions+=(powerline_precmd)
 }
-                                                                        install_powerline_precmd
+install_powerline_precmd
+
+export SVN_EDITOR=vim
