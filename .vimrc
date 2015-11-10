@@ -1,4 +1,5 @@
 " https://github.com/sontek/dotfiles/
+" 
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -147,7 +148,7 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'CSApprox'
 "Plugin 'wombat256.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Lokaltog/vim-powerline'
+"Plugin 'Lokaltog/vim-powerline'
 
 " File list and search
 Plugin 'The-NERD-tree'
@@ -158,14 +159,14 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 
 " Version control
-"Plugin 'Gundo'
-"Plugin 'tpope/vim-fugitive'
+Plugin 'Gundo'
+Plugin 'tpope/vim-fugitive'
 
 " Input aids
 Plugin 'The-NERD-Commenter'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
-"Plugin 'klen/rope-vim'
+Plugin 'klen/rope-vim'
 "Plugin 'AutoClose'
 "Plugin 'rails.vim'
 Plugin 'honza/vim-snippets'
@@ -187,8 +188,10 @@ Plugin 'mephux/bro.vim'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm/.ycm_extra_conf.py'
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:Powerline_symbols='fancy'
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 set laststatus=2
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
 
 
 
@@ -205,7 +208,7 @@ set numberwidth=1             " using only 1 column (and 1 space) while possible
 "set background=light           " We are using dark background in vim
 "set guifont=Source\ Code\ Pro\ Medium:h15
 "set guifont=Inconsolata\ for\ Powerline:h15
-set guifont=Source\ Code\ Pro\ Medium\ for\ Powerline:13
+set guifont=Hack:13
 "set guifont=Sauce\ Code\ Powerline:h15
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
