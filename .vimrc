@@ -100,6 +100,7 @@ map <leader>n :NERDTreeToggle<CR>
 
 map <leader>f :CtrlP<CR>
 map <leader>b :CtrlPBuffer<CR>
+map <leader>jj :CtrlPTag<cr>
 
 " Ack searching
 "nmap <leader>A <Esc>:Ack!
@@ -167,7 +168,7 @@ Plugin 'The-NERD-Commenter'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'klen/rope-vim'
-"Plugin 'AutoClose'
+Plugin 'AutoClose'
 "Plugin 'rails.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
