@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/home/yura/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="pygmalion"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,24 +49,23 @@ ZSH_THEME="pygmalion"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx)
+plugins=(git debian common-aliases history sudo tmux web-search)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/build/toolchain:/Applications/Postgres.app/Contents/Versions/9.4/bin"
+export PATH="/usr/bin:/usr/local/bin:/bin:$HOME/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/yura/Softwares/apache-maven-3.3.3/bin:/home/yura/Code/storm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+    #export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+    #export EDITOR='mvim'
 # fi
 
 # Compilation flags
@@ -83,20 +82,12 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+fi
+export TERM=xterm-256color
 
-
-function powerline_precmd() {
-    export PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
-}
-
-function install_powerline_precmd() {
-    for s in "${precmd_functions[@]}"; do
-        if [ "$s" = "powerline_precmd" ]; then
-            return
-        fi
-    done
-    precmd_functions+=(powerline_precmd)
-}
-install_powerline_precmd
-
-export SVN_EDITOR=vim
+# yura command
+alias sys-upgrade="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y"
+alias dbx="cd /home/yura/Dropbox"
+alias wechat='https://wx.qq.com/?lang=zh_CN'

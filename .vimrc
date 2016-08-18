@@ -1,4 +1,5 @@
 " https://github.com/sontek/dotfiles/
+" 
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -101,6 +102,7 @@ map <leader>n :NERDTreeToggle<CR>
 
 map <leader>f :CtrlP<CR>
 map <leader>b :CtrlPBuffer<CR>
+map <leader>jj :CtrlPTag<cr>
 
 " Ack searching
 "nmap <leader>A <Esc>:Ack!
@@ -161,15 +163,15 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 
 " Version control
-"Plugin 'Gundo'
-"Plugin 'tpope/vim-fugitive'
+Plugin 'Gundo'
+Plugin 'tpope/vim-fugitive'
 
 " Input aids
 Plugin 'The-NERD-Commenter'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
-"Plugin 'klen/rope-vim'
-"Plugin 'AutoClose'
+Plugin 'klen/rope-vim'
+Plugin 'AutoClose'
 "Plugin 'rails.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
@@ -194,6 +196,8 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set rtp+=/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/powerline/bindings/vim
 let g:Powerline_symbols='fancy'
 set laststatus=2
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
 
 
 
@@ -210,7 +214,7 @@ set numberwidth=1             " using only 1 column (and 1 space) while possible
 "set background=light           " We are using dark background in vim
 "set guifont=Source\ Code\ Pro\ Medium:h15
 "set guifont=Inconsolata\ for\ Powerline:h15
-set guifont=Source\ Code\ Pro\ Medium\ for\ Powerline:17
+set guifont=Hack:13
 "set guifont=Sauce\ Code\ Powerline:h15
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
