@@ -48,13 +48,15 @@ fu! SplitScroll()
     :set scrollbind
 endfu
 
-nmap <leader>sb :call SplitScroll()<CR>
+nmap <leader>hs :split<CR>
+nmap <leader>vs :vsplit<CR>
 
 
 "<CR><C-w>l<C-f>:set scrollbind<CR>
 
 " sudo write this
 cmap W! w !sudo tee % >/dev/null
+"cmap w w | pyf /usr/local/Cellar/clang-format/2016-03-29/share/clang/clang-format.py
 
 " Toggle the tasklist
 map <leader>tl :Tlist<CR>
@@ -84,8 +86,8 @@ map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 map <silent> <leader>vv :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " open/close the quickfix window
-nmap <leader>c :copen<CR>
-nmap <leader>cc :cclose<CR>
+nmap <leader>C :copen<CR>
+nmap <leader>CC :cclose<CR>
 
 " for jhen we forget to use sudo to open/edit a file
 cmap w!! w !sudo tee % >/dev/null
@@ -120,6 +122,7 @@ map <leader>r :RopeRename<CR>
 "nmap <Up> <Nop>
 "nmap <Down> <Nop>
 map <leader>s :w<CR>
+map <C-F> :pyf /usr/local/Cellar/clang-format/2016-03-29/share/clang/clang-format.py<cr>
 nmap <C-n> :call NumberToggle()<CR>
 
 " Use <leader>n/m to switch between tabs
@@ -147,7 +150,7 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'CSApprox'
 "Plugin 'wombat256.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Lokaltog/vim-powerline'
+"Plugin 'Lokaltog/vim-powerline'
 
 " File list and search
 Plugin 'The-NERD-tree'
@@ -182,11 +185,13 @@ Plugin 'pep8'
 Plugin 'sukima/xmledit'
 Plugin 'mattn/emmet-vim'
 Plugin 'mephux/bro.vim'
+Plugin 'fatih/vim-go'
 
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm/.ycm_extra_conf.py'
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+set rtp+=/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/powerline/bindings/vim
 let g:Powerline_symbols='fancy'
 set laststatus=2
 
@@ -205,7 +210,7 @@ set numberwidth=1             " using only 1 column (and 1 space) while possible
 "set background=light           " We are using dark background in vim
 "set guifont=Source\ Code\ Pro\ Medium:h15
 "set guifont=Inconsolata\ for\ Powerline:h15
-set guifont=Source\ Code\ Pro\ Medium\ for\ Powerline:13
+set guifont=Source\ Code\ Pro\ Medium\ for\ Powerline:17
 "set guifont=Sauce\ Code\ Powerline:h15
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
@@ -341,6 +346,19 @@ let g:pyflakes_use_quickfix = 0
 " Latex
 let g:tex_flavor='latex'
 
+" Go
+au FileType go nmap <leader>gor <Plug>(go-run)
+au FileType go nmap <leader>gob <Plug>(go-build)
+au FileType go nmap <leader>got <Plug>(go-test)
+au FileType go nmap <leader>goc <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>god <Plug>(go-doc)
+au FileType go nmap <Leader>gov <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gos <Plug>(go-implements)
+au FileType go nmap <Leader>goi <Plug>(go-info)
+au FileType go nmap <Leader>goe <Plug>(go-rename)
 
 " Add the virtualenv's site-packages to vim path
 if has('python')
