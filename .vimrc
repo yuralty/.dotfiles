@@ -146,10 +146,7 @@ call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
 
 " Appearence and themes
-"Plugin 'CSApprox'
-"Plugin 'wombat256.vim'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'Lokaltog/vim-powerline'
 
 " File list and search
 Plugin 'The-NERD-tree'
@@ -169,18 +166,18 @@ Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'klen/rope-vim'
 Plugin 'AutoClose'
-"Plugin 'rails.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 
 " syntax checker
 "Plugin 'Syntastic'
 "Plugin 'Engspchk'
+Plugin 'rhysd/vim-clang-format'
 
 " lang enhance
 "Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 "Plugin 'qrps/lilypond-vim'
-Plugin 'pep8'
+"Plugin 'pep8'
 Plugin 'sukima/xmledit'
 Plugin 'mattn/emmet-vim'
 Plugin 'mephux/bro.vim'
@@ -195,6 +192,9 @@ set t_Co=256
 let g:Powerline_symbols = 'fancy'
 
 
+let g:clang_format#code_style='google'
+autocmd FileType c,cpp,objc nmap <Leader>C :ClangFormatAutoToggle<CR>
+autocmd FileType c,cpp,objc ClangFormatAutoEnable
 
 
 " ==========================================================
