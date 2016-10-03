@@ -49,11 +49,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git debian common-aliases history sudo tmux web-search)
+plugins=(git common-aliases history sudo tmux web-search)
 
 # User configuration
 
-export PATH="/usr/bin:/usr/local/bin:/bin:$HOME/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/yura/Softwares/apache-maven-3.3.3/bin:/home/yura/Code/storm/bin"
+export PATH="/usr/bin:/usr/local/bin:/bin:$HOME/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/yura/.local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,8 +82,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r /home/yura/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /home/yura/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 export TERM=xterm-256color
 
