@@ -170,7 +170,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 
 " syntax checker
-"Plugin 'Syntastic'
+"Plugin 'scrooloose/syntastic'
 "Plugin 'Engspchk'
 Plugin 'rhysd/vim-clang-format'
 
@@ -181,12 +181,13 @@ Plugin 'rhysd/vim-clang-format'
 Plugin 'sukima/xmledit'
 Plugin 'mattn/emmet-vim'
 Plugin 'mephux/bro.vim'
+Plugin 'tomlion/vim-solidity'
 
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm/.ycm_extra_conf.py'
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set rtp+=/home/yura/.local/lib/python3.5/site-packages/powerline/bindings/vim
 set laststatus=2
 set t_Co=256
 let g:Powerline_symbols = 'fancy'

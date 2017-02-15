@@ -49,11 +49,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases history sudo tmux web-search)
+plugins=(git archlinux common-aliases history sudo tmux web-search)
 
 # User configuration
 
 export PATH="/usr/bin:/usr/local/bin:/bin:$HOME/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/yura/.local/bin"
+#export PATH=$HOME/Code/UIUC/CS598AB/toolchain/gcc-linaro-arm-linux-gnueabihf-4.9-2014.08_linux/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -88,6 +89,5 @@ fi
 export TERM=xterm-256color
 
 # yura command
-alias sys-upgrade="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y"
 alias dbx="cd /home/yura/Dropbox"
-alias wechat='https://wx.qq.com/?lang=zh_CN'
+alias reload="source ~/.zshrc"
