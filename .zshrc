@@ -53,7 +53,8 @@ plugins=(git archlinux common-aliases history sudo tmux web-search)
 
 # User configuration
 
-export PATH="/usr/bin:/usr/local/bin:/bin:$HOME/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/yura/.local/bin"
+export GOPATH=$HOME/Code/go
+export PATH="/usr/bin:/usr/local/bin:/bin:$HOME/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/yura/.local/bin:$GOPATH/bin"
 #export PATH=$HOME/Code/UIUC/CS598AB/toolchain/gcc-linaro-arm-linux-gnueabihf-4.9-2014.08_linux/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 

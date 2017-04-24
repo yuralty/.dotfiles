@@ -182,6 +182,7 @@ Plugin 'sukima/xmledit'
 Plugin 'mattn/emmet-vim'
 Plugin 'mephux/bro.vim'
 Plugin 'tomlion/vim-solidity'
+Plugin 'vhdirk/vim-cmake'
 
 
 let g:UltiSnipsExpandTrigger="<c-j>"
