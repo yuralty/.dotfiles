@@ -151,7 +151,8 @@ Plugin 'gmarik/Vundle.vim'
 " Appearence and themes
 "Plugin 'CSApprox'
 "Plugin 'wombat256.vim'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
+Plugin 'joshdick/onedark.vim'
 "Plugin 'Lokaltog/vim-powerline'
 
 " File list and search
@@ -301,7 +302,7 @@ if has("gui_running")
 endif
 
 " Set colors and themes
-colorscheme solarized
+colorscheme onedark
 set background=dark
 
 

@@ -5,7 +5,7 @@ export ZSH=/Users/yura/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,11 +49,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git debian common-aliases history sudo tmux web-search)
+plugins=(git common-aliases history sudo autojump tmux web-search)
 
 # User configuration
 
-export PATH="/usr/bin:/usr/local/bin:/bin:$HOME/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/yura/Softwares/apache-maven-3.3.3/bin:/home/yura/Code/storm/bin"
+export PATH="/usr/local/bin:/usr/bin:$HOME/.local/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,12 +82,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r /Users/yura/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /Users/yura/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 export TERM=xterm-256color
 
 # yura command
-alias sys-upgrade="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y"
-alias dbx="cd /home/yura/Dropbox"
-alias wechat='https://wx.qq.com/?lang=zh_CN'
+alias vim=nvim
+eval "$(thefuck --alias)"
+
